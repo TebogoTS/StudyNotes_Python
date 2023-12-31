@@ -46,6 +46,10 @@ display_area(length, width)
 
 Functional programming emphasizes the use of functions that produce outputs based on inputs without changing state or data.
 
+Functional programming is a style of writing code that focuses on using functions as the main building blocks of a program. In this style, functions behave like mathematical functions: they take inputs, perform some operations, and produce outputs without changing or modifying any data outside their scope.
+
+Think of functional programming as a set of actions, almost like a recipe of formula, where each action (function) takes something in, does something specific, and gives you something back without messing with other thngs around it.
+
 ### Example of functional programming
 ```
 def square(x):
@@ -56,3 +60,15 @@ numbers = [1, 2, 3, 4, 5]
 squared_numbers = list(map(square, numbers))
 print(squared_numbers)
 ```
+
+# Object-Oriented Programming (OOP):
+
+Imagine you're building something with LEGO blocks. Each LEGO piece is like an object, and you can connect these pieces together to create somehting bigger, like a house or a car. In OOP, objects are like these LEGO pieces, and you use them to build larger and more complex structures.
+
+### Key Concepts in OOP:
+
+1. <b>Objects:<b> Objects are the basic building blocks of OOP. They represent real-world things and contain both data (attributes) and actions (methods/functions).
+2. Classes: Classes are like blueprints or templates that define how an object will look and behave. They encapsulate the behavior and properties common to a group of objects.
+3. Encapsulation: This means bundling the data (attributes) and the methods (functions) that operate on the data into a single unit (an object).
+4. Inheritance: Objects can inherit properties and behavior from other objects. For example, a "Car" object can inherit features from a more general "Vehicle" class.
+5. Polymorphism: This refers to the ability of different objects to be treated as objects of a common type. For instance, a "Circle" object and a "Rectangle" object can both be treated as "Shapes" because they share certain characteristics.
