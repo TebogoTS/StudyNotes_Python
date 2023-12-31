@@ -72,3 +72,28 @@ Imagine you're building something with LEGO blocks. Each LEGO piece is like an o
 3. Encapsulation: This means bundling the data (attributes) and the methods (functions) that operate on the data into a single unit (an object).
 4. Inheritance: Objects can inherit properties and behavior from other objects. For example, a "Car" object can inherit features from a more general "Vehicle" class.
 5. Polymorphism: This refers to the ability of different objects to be treated as objects of a common type. For instance, a "Circle" object and a "Rectangle" object can both be treated as "Shapes" because they share certain characteristics.
+
+### Example of OOP 
+
+##### Define a class called Character
+```
+class Character:
+    def __init__(self, name, health):
+        self.name = name
+        self.health = health
+
+    def attack(self):
+        print(f"{self.name} attacks!")
+```
+
+##### Create instances (objects) of the Character class
+```
+hero = Character("Hero", 100)
+enemy = Character("Enemy", 80)
+```
+
+##### Access attributes and call methods of objects
+```
+print(f"{hero.name}'s health:", hero.health)
+enemy.attack()
+```
