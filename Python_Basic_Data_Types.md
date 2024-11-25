@@ -143,4 +143,130 @@ Here’s a summary of the basic data types in Python as outlined in **Table 2-1*
 
 ---
 
-This table serves as a quick reference guide for understanding Python's basic types, their mutability, and how they behave in practice!
+### Study Notes: Chapter 2 - Data: Types, Values, Variables, and Names
+
+---
+
+#### **Key Concepts**
+
+1. **Data Representation in Computers**:
+   - Computers store data as bits (0s and 1s).
+   - These bits can represent different data types (e.g., numbers, text, code) depending on interpretation.
+
+2. **Python Objects**:
+   - All Python data types are objects.
+   - Objects have:
+     - **Type**: Determines what the object can do.
+     - **Unique ID**: Identifies the object in memory.
+     - **Value**: The data inside the object.
+     - **Reference Count**: Tracks how many variables reference the object.
+
+3. **Memory Model**:
+   - Visualize memory as shelves filled with boxes (objects).
+   - Boxes have labels (type and value) and are referenced by variable names.
+
+4. **Data Types in Python**:
+   - **Immutable Types**: Values cannot change after creation (e.g., int, float, tuple, str).
+   - **Mutable Types**: Values can be modified (e.g., list, dict, set).
+   - Python strongly types variables—an object’s type doesn’t change even if mutable.
+
+5. **Variables**:
+   - Variables are *names* pointing to objects.
+   - Names are case-sensitive and must follow specific naming rules.
+
+6. **Assignment and Reassignment**:
+   - `=` assigns a value to a variable, but it’s not the same as mathematical equality.
+   - Reassigning a variable makes it reference a new object, not modify the original.
+
+7. **Reference Behavior**:
+   - Variables can reference the same object.
+   - Immutable objects: Value remains unchanged.
+   - Mutable objects: Changes affect all variables referencing the object.
+
+8. **Garbage Collection**:
+   - Python automatically manages memory.
+   - Objects with zero references are garbage-collected.
+
+9. **Choosing Variable Names**:
+   - Use meaningful names for clarity and maintenance.
+   - Balance between brevity (short names) and clarity (descriptive names).
+
+---
+
+#### **Examples**
+
+1. **Assigning and Printing Variables**:
+   ```python
+   prince = 99
+   print(prince)  # Output: 99
+   ```
+
+2. **Checking Data Types**:
+   ```python
+   type(5)         # <class 'int'>
+   type(2.0)       # <class 'float'>
+   type(5 + 2.0)   # <class 'float'>
+   ```
+
+3. **Immutable vs Mutable Objects**:
+   - Immutable Example:
+     ```python
+     x = 5
+     y = x
+     x = 10
+     print(x)  # Output: 10
+     print(y)  # Output: 5
+     ```
+   - Mutable Example:
+     ```python
+     a = [1, 2, 3]
+     b = a
+     a[0] = 99
+     print(a)  # Output: [99, 2, 3]
+     print(b)  # Output: [99, 2, 3]
+     ```
+
+4. **Simultaneous Assignment**:
+   ```python
+   x = y = z = 42
+   print(x, y, z)  # Output: 42 42 42
+   ```
+
+5. **Checking Types with `isinstance()`**:
+   ```python
+   isinstance(5, int)    # True
+   isinstance(2.0, int)  # False
+   ```
+
+---
+
+#### **Things to Try**
+
+1. Assign `99` to the variable `prince` and print it:
+   ```python
+   prince = 99
+   print(prince)  # Output: 99
+   ```
+
+2. Check the type of the value `5`:
+   ```python
+   print(type(5))  # <class 'int'>
+   ```
+
+3. Check the type of `2.0`:
+   ```python
+   print(type(2.0))  # <class 'float'>
+   ```
+
+4. Evaluate the type of the expression `5 + 2.0`:
+   ```python
+   print(type(5 + 2.0))  # <class 'float'>
+   ```
+
+---
+
+#### **Takeaways**
+
+- Python’s flexible data handling abstracts away low-level memory management.
+- Understanding Python’s data model and variable behavior is critical for efficient programming.
+- Thoughtful variable naming improves code readability and maintainability.
